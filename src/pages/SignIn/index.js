@@ -26,7 +26,7 @@ export default function SignIn() {
   return (
     <>
       <img src={logo} alt="GoBarber" />
-      <Form schema={schema} onSubmit={handleSubmit}>
+      <Form schema={schema} onSubmit={handleSubmit} autoComplete="off">
         <span className="label">SEU E-MAIL</span>
         <Input name="email" type="email" placeholder="Seu e-mail" />
         <span className="label">SUA SENHA</span>
