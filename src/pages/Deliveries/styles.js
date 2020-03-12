@@ -93,7 +93,7 @@ export const ItemTable = styled.div`
   padding: 15px 0 15px 20px;
   border-radius: 4px;
 
-  div {
+  .item {
     display: grid;
     grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 0.3fr;
     width: 100%;
@@ -106,6 +106,15 @@ export const ItemTable = styled.div`
 
       :last-child {
         justify-self: center;
+      }
+    }
+
+    button {
+      background: transparent;
+      border: none;
+
+      svg {
+        color: #999;
       }
     }
   }

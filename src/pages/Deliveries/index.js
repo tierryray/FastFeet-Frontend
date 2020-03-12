@@ -3,7 +3,8 @@ import React, { useState, useMemo, useEffect } from 'react';
 import { MdAdd } from 'react-icons/md';
 
 import SearchInput from '~/components/SearchInput';
-import ActionButton from '~/components/ActionButton';
+import GeneralButton from '~/components/GeneralButton';
+import ActionsButton from '~/components/ActionsButton';
 
 import api from '~/services/api';
 
@@ -29,7 +30,7 @@ export default function Deliveries() {
         <h1>Gerenciando Encomendas</h1>
         <ActionsForm>
           <SearchInput placeholder="Busque por encomendas" />
-          <ActionButton Icon={MdAdd} title="Cadastrar" />
+          <GeneralButton Icon={MdAdd} title="Cadastrar" />
         </ActionsForm>
       </header>
 
@@ -46,12 +47,12 @@ export default function Deliveries() {
       </HeaderTable>
 
       <ItemTable>
-        <div>
+        <div className="item">
           <span>#01</span>
           <span>Ludwig van Beethoven</span>
           <span>
             <Picture
-              src={`https://avatar.oxro.io/avatar?name=John+Doe`}
+              src="https://avatar.oxro.io/avatar?name=John+Doe"
               alt="John Doe"
             />
             John Doe
@@ -59,16 +60,16 @@ export default function Deliveries() {
           <span>Rio do Sul</span>
           <span>Santa Catarina</span>
           <Status delivered>ENTREGUE</Status>
-          <span>...</span>
+          <ActionsButton />
         </div>
       </ItemTable>
       <ItemTable>
-        <div>
+        <div className="item">
           <span>#01</span>
           <span>Ludwig van Beethoven</span>
           <span>
             <Picture
-              src={`https://avatar.oxro.io/avatar?name=John+Doe`}
+              src="https://avatar.oxro.io/avatar?name=John+Doe"
               alt="John Doe"
             />
             John Doe
@@ -76,17 +77,17 @@ export default function Deliveries() {
           <span>Rio do Sul</span>
           <span>Santa Catarina</span>
           <Status pending>PENDENTE</Status>
-          <span>...</span>
+          <ActionsButton />
         </div>
       </ItemTable>
 
       <ItemTable>
-        <div>
+        <div className="item">
           <span>#01</span>
           <span>Ludwig van Beethoven</span>
           <span>
             <Picture
-              src={`https://avatar.oxro.io/avatar?name=John+Doe`}
+              src="https://avatar.oxro.io/avatar?name=John+Doe"
               alt="John Doe"
             />
             John Doe
@@ -94,17 +95,17 @@ export default function Deliveries() {
           <span>Rio do Sul</span>
           <span>Santa Catarina</span>
           <Status removal>RETIRADA</Status>
-          <span>...</span>
+          <ActionsButton />
         </div>
       </ItemTable>
 
       <ItemTable>
-        <div>
+        <div className="item">
           <span>#01</span>
           <span>Ludwig van Beethoven</span>
           <span>
             <Picture
-              src={`https://avatar.oxro.io/avatar?name=John+Doe`}
+              src="https://avatar.oxro.io/avatar?name=John+Doe"
               alt="John Doe"
             />
             John Doe
@@ -112,7 +113,7 @@ export default function Deliveries() {
           <span>Rio do Sul</span>
           <span>Santa Catarina</span>
           <Status canceled>CANCELADA</Status>
-          <span>...</span>
+          <ActionsButton />
         </div>
       </ItemTable>
     </Container>

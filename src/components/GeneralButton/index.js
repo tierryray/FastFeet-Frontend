@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { Button } from './styles';
 
-export default function ActionButton({ Icon, title }) {
+export default function GeneralButton({ Icon, title }) {
   return (
     <Button>
       <Icon color="#fff" size={22} />
@@ -12,7 +12,7 @@ export default function ActionButton({ Icon, title }) {
   );
 }
 
-ActionButton.propTypes = {
+GeneralButton.propTypes = {
   Icon: PropTypes.func.isRequired,
   title: PropTypes.string.isRequired,
 };
